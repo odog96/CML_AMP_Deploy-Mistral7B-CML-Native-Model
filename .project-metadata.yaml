@@ -1,5 +1,5 @@
-name: LLAMA-2-7B Standalone Model Deployment
-description: This AMP deploys Llama-2-7b model as a CML model endpoint, callable via an API. Model is hosted within CML and requires GPU node with 16GB memory and 4 cores minimum.
+name: Mistral-7B Standalone Model Deployment
+description: This AMP deploys Mistral-7b model as a CML model endpoint, callable via an API. Model is hosted within CML and requires GPU node with 16GB memory and 4 cores minimum.
 author: Cloudera
 date: "2024-1-22"
 specification_version: 1.0
