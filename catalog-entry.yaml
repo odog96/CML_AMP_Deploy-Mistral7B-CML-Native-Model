@@ -7,11 +7,11 @@ entries:
       This AMP deploys Mistral AI's Mistral 7B model as a CML API endpoint. Requires a GPU node with 4 vCores and 16 GB memory minimum.
     long_description: |
       This AMP deploys Mistral AI's Mistral 7B m model as a CML API endpoint. Requires a GPU node with 4 vCores and 16 GB memory minimum.
-    image_path: "https://raw.githubusercontent.com/kevinbtalbert/CML_Deploy-Mistral7B-CML-Native-Model/main/images/human-ml-unsplash.jpg"
+    image_path: "https://raw.githubusercontent.com/kevinbtalbert/CML_AMP_Deploy-Mistral7B-CML-Native-Model/main/images/human-ml-unsplash.jpg"
     tags: 
       - Mistral 7B
       - LLM
       - Mistral AI
       - Model Deployment
-    git_url: "https://github.com/kevinbtalbert/CML_Deploy-Mistral7B-CML-Native-Model"
+    git_url: "https://github.com/kevinbtalbert/CML_AMP_Deploy-Mistral7B-CML-Native-Model"
     is_prototype: true

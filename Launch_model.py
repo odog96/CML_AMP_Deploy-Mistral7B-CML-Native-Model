@@ -53,7 +53,7 @@ def generate(prompt, max_new_tokens=50, temperature=0, repetition_penalty=1.0, n
   top_p              - cumulative probability to determine how many tokens to keep (i.e. enough tokens will be considered, so their combined probabiliy reaches top_p)
   top_k              - numbe of highest-probability tokens to keep (i.e. only top_k "best" tokens will be considered for response)
   """
-  batch = tokenizer(prompt, return_tensors='pt')
+  batch = tokenizer(prompt, return_tensors='pt').to("cuda")
   
   with torch.cuda.amp.autocast():
     output_tokens = model.generate(**batch,
