@@ -18,7 +18,7 @@ bnb_config = BitsAndBytesConfig(
 )
 
 # Create a model object with above parameters
-model_name = "mistralai/Mistral-7B-v0.1"
+model_name = "mistralai/Mistral-7B-Instruct-v0.2"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name, 
