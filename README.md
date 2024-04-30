@@ -19,9 +19,12 @@ Deploy the model by:
   - This is the function implemented in the python script which wraps text inference with the mistral7b model
 - Set sample json payload
    ```
-    {
-    "prompt": "test prompt hello"
-    }
+  {
+    "prompt": "What is Cloudera?",
+    "temperature": 0,
+    "max_new_tokens": 50,
+    "repetition_penalty": 0.5
+  }
    ```
 - Pick Runtime
   - PBJ Workbench -- Python 3.9 -- Nvidia GPU -- 2023.08
