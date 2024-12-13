@@ -27,7 +27,7 @@ Deploy the model by:
   }
    ```
 - Pick Runtime
-  - PBJ Workbench -- Python 3.9 -- Nvidia GPU -- 2023.08
+  - Jupyterlab -- Python 3.10 -- Nvidia GPU -- 2024.10
 - Set Resource Profile
   - At least 4CPU / 16MEM
   - 1 GPU

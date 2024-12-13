@@ -6,6 +6,8 @@ import torch
 import cml.metrics_v1 as metrics
 import cml.models_v1 as models
 
+import sentencepiece
+
 hf_access_token = os.environ.get('HF_ACCESS_TOKEN')
 
 # Quantization
@@ -20,7 +22,7 @@ bnb_config = BitsAndBytesConfig(
 )
 
 # Create a model object with above parameters
-model_name = "mistralai/Mistral-7B-Instruct-v0.2"
+model_name = "mistralai/Mistral-7B-Instruct-v0.3"
 
 model = AutoModelForCausalLM.from_pretrained(
     model_name, 
@@ -41,7 +43,15 @@ def opt_args_value(args, arg_name, default):
     return default
 
 # Define tokenizer parameters
-tokenizer = AutoTokenizer.from_pretrained(model_name, trust_remote_code=True, token=hf_access_token)
+
+
+tokenizer = AutoTokenizer.from_pretrained(
+    model_name,
+    trust_remote_code=True,
+    token=hf_access_token,
+    use_fast=True  # Explicitly request the fast tokenizer
+)
+
 tokenizer.pad_token = tokenizer.eos_token
 
 # Mamke the call to 
