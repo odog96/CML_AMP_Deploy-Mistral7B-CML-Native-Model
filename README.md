@@ -19,13 +19,14 @@ Deploy the model by:
   - This is the function implemented in the python script which wraps text inference with the mistral7b model
 - Set sample json payload
    ```
+<<<<<<< HEAD
   {
     "prompt": "What is Cloudera?",
     "temperature": 0,
     "max_new_tokens": 50,
     "repetition_penalty": 0.5
   }
-   ```
+
 - Pick Runtime
   - Jupyterlab -- Python 3.10 -- Nvidia GPU -- 2024.10
 - Set Resource Profile
@@ -35,3 +36,43 @@ Deploy the model by:
 - Wait until it is Deployed
 
 Test the Model.
+<<<<<<< HEAD
+=======
+
+
+## Use Case Examples
+
+### Email Generator
+- With the model deployed and runnning, open a new session
+- In a running session, select the Python 'callBooth.py' and edit the model end point URL and API key.  These values can be found in the model testing UI on CML. 
+    ```
+        # API endpoint URL
+        endpoint = "https://YOUR MODEL ENDPOINT"
+        
+        #Access Key
+        Akey = 'paste-here'
+    ```
+- Once you have updated these values, just run the script. It will access the file located in /data/CSVExample.csv
+
+### Document Feasiblity Tester
+
+- With the model deployed and runnning, open a new session
+- In a running session, select the Python 'PDFRip.py' and edit the model end point URL and API key.  These values can be found in the model testing UI on CML. 
+    ```
+        # API endpoint URL
+        endpoint = "https://YOUR MODEL ENDPOINT"
+        
+        #Access Key
+        Akey = 'paste-here'
+    ```
+- Once you have updated these values, just run the script. It will access the file located in /data/DPO.xml
+- To work with a new PDF, using the tool GROBRID to convert a PDF to XML, which can used online using this following link.  https://huggingface.co/spaces/kermitt2/grobid
+- This newly converted PDF document can be used after modifing the following code section:
+    ```
+        #Pass XML File and Return String
+        xml_string = read_xml_file('data/YOUR_NEW_DOC.xml')
+    ```
+
+
+Copyright (c) 2023 - 2024 - Cloudera, Inc. All rights reserved.
+>>>>>>> 8bd45909157145ec8abb14bb53a29f7227da86f4

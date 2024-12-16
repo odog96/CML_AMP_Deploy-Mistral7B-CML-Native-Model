@@ -13,23 +13,25 @@ def call_api(endpoint, data=None, headers=None):
 
 def main():
     # API endpoint URL
-    endpoint = "https://modelservice.ml-f1051bc9-513.go01-dem.ylcu-atmi.cloudera.site/model"
+    endpoint = "https://modelservice.ml-cd558cf0-ec7.se-sandb.a465-9q4k.cloudera.site/model"
 
     # Request headers
     headers = {'Content-Type': 'application/json'}
     
     #Access Key
-    Akey = 'm8k0vdh5nszeeuz4sv6oxqu2fjo16zmd'
+    Akey = 'mzauf1jp0ikojdizidywdfc82hhb9cvv'
     
-    #Prompt
+    #Prompt 
+    instart = "[INST]"
+    inend = "[/INST]" 
     role1 = 'You are from Cloudera ' 
     action = 'write an email to '
     context = 'to thank them for speaking to us about '
     topics = 'GenAI and enabling your organizations success.'
    
     
-    promptPart1 = role1 + action + sender
-    promptPart2 = context + topics
+    promptPart1 = instart + role1 + action 
+    promptPart2 = context + topics + inend
     endofPrompt = " ** "
     endofResponse = ", 'response_time_s':"
     
